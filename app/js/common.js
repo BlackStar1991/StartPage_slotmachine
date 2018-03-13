@@ -33,115 +33,20 @@ window.onload = function() {
     }
 
 
-
-////// HITs slider
-
-    // function sliderHits() {
-    //
-    //     var currentItems = 4,
-    //         sliderItems = $(".bl_slider__item").length,
-    //         currentLoop;
-    //     if (sliderItems > currentItems) {
-    //         currentLoop = true;
-    //     }else {
-    //         currentLoop = false;
-    //     }
-    //
-    //
-    //     $(".bl_sliderHits").owlCarousel({
-    //         items: currentItems,
-    //         loop: currentLoop,
-    //         nav: true,
-    //         navText: true,
-    //         dots: false,
-    //         autoplay: false,
-    //         stopOnHover: true,
-    //         // margin: 6,
-    //         smartSpeed: 1000, //Время движения слайда
-    //         autoplayTimeout: 4000, //Время смены слайда
-    //         pagination: false,
-    //         responsiveClass: true,
-    //         responsive: {
-    //             1200: {
-    //                 items: 4
-    //             },
-    //             992: {
-    //                 items: 3,
-    //                 center: true
-    //             },
-    //             550: {
-    //
-    //                 dots: false,
-    //                 items: 2
-    //             },
-    //             320: {
-    //                 dots: false,
-    //                 items: 1,
-    //                 center: true
-    //             }
-    //
-    //         }
-    //     });
-    // }
-    //
-    // sliderHits();
-
-/// SLICK SLIDER
-
-    /*
-        $(".bl_product__productSlider").slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.bl_product__verticalSlider',
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        arrows: true,
-                        prevArrow: '<div class="mainProductSlickArrow-prev"></div>',
-                        nextArrow: '<div class="mainProductSlickArrow-next"></div>',
-                        infinite: true
-                    }
-                },
-                {
-                    breakpoint: 320,
-                    settings: {
-                        slidesToShow: 1,
-                        arrows: true,
-                        prevArrow: '<div class="mainProductSlickArrow-prev"></div>',
-                        nextArrow: '<div class="mainProductSlickArrow-next"></div>',
-                        infinite: true
-                    }
-                }
-            ]
-        });
-    */
-
-    // Zoom Effect
-    /*
-        function zoomEffect() {
-
-            if (body.width() >= 1200) {
-                $(".bl_product__productSlider .slick-active .bl_product_image").elevateZoom({
-                    borderSize: 2,
-                    borderColour: "#7f8000"
-                });
-            }else if ( (body.width() < 1200) && (body.width() > 768) ) {
-                $(".bl_product__productSlider .slick-active .bl_product_image").elevateZoom({
-                    zoomType: "inner",
-                    cursor: "crosshair"
-                });
-            }else {
-                return false;
+  ////// LikeLinks buttons
+    function likeLink(btn) {
+        btn.on("click", function(){
+            var urlLink = $(this).attr("data-href");
+            if ( urlLink === "" ){
+                alert("URL address isn't correct / шляпа" );
+            }else{
+                window.open(urlLink);
             }
+        })
+    }
 
+   
 
-        }
-        zoomEffect();
-    */
 
 
 // Ancor to top
